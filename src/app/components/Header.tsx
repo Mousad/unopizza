@@ -169,7 +169,7 @@ export function Header() {
                   >
                     <img
                       src={product.image}
-                      className="w-full h-40 object-cover"
+                      className="w-full h-30 object-cover"
                     />
 
                     <div className="p-2 text-center">
@@ -184,7 +184,7 @@ export function Header() {
             </div>
 
             {/* SOCIAL */}
-            <div className="absolute bottom-16 w-full flex justify-center gap-8">
+            <div className="absolute bottom-5 w-full flex justify-center gap-8">
 
               <a
                 href="https://facebook.com"
