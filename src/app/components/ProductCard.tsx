@@ -2,6 +2,7 @@ import { Link } from 'react-router';
 import { Product } from '../data/products';
 import { useCart } from '../contexts/CartContext';
 import { toast } from 'sonner';
+import { FaShoppingCart } from "react-icons/fa";
 
 interface ProductCardProps {
   product: Product;
@@ -38,13 +39,13 @@ export function ProductCard({ product, showDetails = true }: ProductCardProps) {
           <span className="text-[#15110e] bg-[#c3bfbc] px-2 rounded-xs"> {minPrice} <span className="text-[#e53935]">ج م</span></span>
        
         <div className="flex gap-2">
-          <button
-            onClick={handleAddToCart}
-            className="flex  text-[#E53935]  px-1  rounded-[220%]  transition-colors"
-          >
-             🛒
-          </button>
-          </div>
+  <button
+    onClick={handleAddToCart}
+    className="flex items-center justify-center text-[#E53935] px-2 py-2 rounded-full transition-colors"
+  >
+    <FaShoppingCart />
+  </button>
+</div>
         </div>
       </div>
     </div>

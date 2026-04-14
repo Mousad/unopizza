@@ -30,16 +30,28 @@ export function Home() {
   }, [slides.length]);
 
   const categories = [
-    { name: 'بيتزا', icon: '🍕', path: '/products?category=pizza' },
-    { name: 'فطاير شرقية', icon: '🥟', path: '/products?category=fatayer' },
-    { name: 'كلزوني', icon: '🥙', path: '/products?category=calzone' },
-  ];
+  { name: 'بيتزا', image: 'https://i.pinimg.com/736x/60/19/aa/6019aa3d52409c1316d6b0ddef331e43.jpg', path: '/products?category=pizza' },
+  { name: 'فطاير شرقية', image: 'https://i.pinimg.com/736x/51/47/2a/51472a709f8ec7b0a4bde03cfe13c903.jpg', path: '/products?category=fatayer' },
+  { name: 'كلزوني', image: 'https://i.pinimg.com/1200x/df/28/f4/df28f426ee5d1edf513eb802cb5ccf31.jpg', path: '/products?category=calzone' },
+];
 
   const galleryImages = [
-    'https://images.unsplash.com/photo-1651981038189-e71e557f5869?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXp6YSUyMHJlc3RhdXJhbnQlMjBraXRjaGVufGVufDF8fHx8MTc3NjEwODMxMnww&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1710575341655-0062ead9f389?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXp6YSUyMGNoZWYlMjBjb29raW5nfGVufDF8fHx8MTc3NjEwODMxNHww&ixlib=rb-4.1.0&q=80&w=1080',
-    'https://images.unsplash.com/photo-1678443316613-dbc3261c8b50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXp6YSUyMGRlbGl2ZXJ5JTIwYm94fGVufDF8fHx8MTc3NjEwODMxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    'https://i.pinimg.com/1200x/db/b2/3f/dbb23fdb033332fce2f7a3c0ffdc8539.jpg',
+    'https://i.pinimg.com/736x/51/71/cb/5171cb5ffef2c5ab986d43050126964e.jpg',
+    'https://i.pinimg.com/1200x/5d/64/c0/5d64c07665b27adf9817d7f1dbaed9b7.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI6cMhCNNDebTWrL7p5kLZ5JGM2c35Ec_riA&s',
   ];
+  const offers = [
+  "🍕 عروض بيتزا حصرية - خصم يصل إلى 30%",
+  "🚚 توصيل سريع خلال 30 دقيقة",
+  "💥 خصومات يومية على كل الطلبات",
+  "🧀 اطلب الآن واستمتع بأفضل طعم",
+  "🧀 اطلب الآن واستمتع بأفضل طعم",
+  "🧀 اطلب الآن واستمتع بأفضل طعم",
+  "🧀 اطلب الآن واستمتع بأفضل طعم",
+  "🧀 اطلب الآن واستمتع بأفضل طعم",
+];
+
 
   return (
     <div className="min-h-screen">
@@ -74,68 +86,212 @@ export function Home() {
       
        
       </section>
+      <section className="w-full bg-[#E53935] text-white overflow-hidden py-2">
+  <div className="flex w-max animate-marquee">
+
+    {/* مجموعة 1 */}
+    <div className="flex gap-10 px-8 whitespace-nowrap flex-none">
+      {offers.map((item, i) => (
+        <span key={i}>{item}</span>
+      ))}
+    </div>
+
+    {/* مجموعة 2 (نفس المحتوى) */}
+    <div className="flex gap-16 px-8 whitespace-nowrap flex-none">
+      {offers.map((item, i) => (
+        <span key={`copy1-${i}`}>{item}</span>
+      ))}
+    </div>
+
+    {/* مجموعة 3 (مكررة مرة ثانية لضمان لا نهائي 100%) */}
+    <div className="flex gap-16 px-8 whitespace-nowrap flex-none">
+      {offers.map((item, i) => (
+        <span key={`copy2-${i}`}>{item}</span>
+      ))}
+    </div>
+
+  </div>
+</section>
+      
     
       {/* Categories Section */}
-      <section className="container  mx-auto px-4 py-16">
-        <h2 className="text-3xl text-center mb-8">الاقسام</h2>
-        <div className="grid flex  grid-cols-2 md:grid-cols-3 gap-6">
-          {categories.map((category) => (
-            <Link
-              key={category.name}
-              to={category.path}
-              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
-            >
-              <div className="text-6xl mb-4">{category.icon}</div>
-              <h3 className="text-2xl">{category.name}</h3>
-            </Link>
-          ))}
-        </div>
-      </section>
+<section className="container mx-auto px-4 py-16">
+  <h2 className="text-3xl text-center mb-8">الاقسام</h2>
+
+  <div className="grid grid-cols-2 gap-6">
+    {categories.map((category, index) => (
+      <Link
+        key={category.name}
+        to={category.path}
+        className={`relative w-full h-48 rounded-2xl overflow-hidden group
+          ${index === categories.length - 1 ? "col-span-2" : ""}`}
+      >
+        {/* الصورة */}
+        <img
+          src={category.image}
+          alt={category.name}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+
+        {/* overlay */}
+        <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+
+        {/* النص */}
+        <h3 className="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold">
+          {category.name}
+        </h3>
+      </Link>
+    ))}
+  </div>
+</section>
 
       {/* Popular Products */}
       <section className="container mx-auto px-4 py-6">
-        <h2 className="text-3xl text-center mb-8">المنتجات الشائعة</h2>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {popularProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+  <h2 className="text-3xl text-center mb-8">المنتجات الشائعة</h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+    {popularProducts.map((product, index) => (
+      <div
+        key={product.id}
+        className={index === 4 ? "col-span-2 flex justify-center" : ""}
+      >
+        <div className={index === 4 ? "w-full max-w-[250px]" : "w-full"}>
+          <ProductCard product={product} />
         </div>
-        <div className="text-center">
-          <Link
-            to="/products"
-            className="inline-block bg-[#E53935] text-white px-8 py-3 rounded-full hover:bg-[#c62828] transition-colors"
-          >
-            عرض كل المنتجات
-          </Link>
-        </div>
-      </section>
+      </div>
+    ))}
+  </div>
+
+  <div className="text-center">
+    <Link
+      to="/products"
+      className="inline-block bg-[#E53935] text-white px-8 py-3 rounded-full hover:bg-[#c62828] transition-colors"
+    >
+      عرض كل المنتجات
+    </Link>
+  </div>
+</section>
 
       {/* Promo Section */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-1">
-              <img
-                src="https://images.unsplash.com/photo-1710575341655-0062ead9f389?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXp6YSUyMGNoZWYlMjBjb29raW5nfGVufDF8fHx8MTc3NjEwODMxNHww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="نحن نصنع البيتزا بحب"
-                className="w-full rounded-2xl shadow-lg"
-              />
-            </div>
-            <div className="flex-1 text-center md:text-right">
-              <h2 className="text-4xl mb-4">نحن نصنع البيتزا بحب </h2>
-              <p className="text-xl text-gray-600 mb-6">
-                نستخدم أفضل المكونات الطازجة لنقدم لك تجربة طعم لا تُنسى
-              </p>
-              <Link
-                to="/menu"
-                className="inline-block bg-[#FFC107] text-gray-900 px-8 py-3 rounded-full hover:bg-[#ffb300] transition-colors"
-              >
-                اكتشف المنيو
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+     <section className="py-10">
+  <div className="container mx-auto px-4">
+
+    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
+
+      {/* الصورة */}
+      <img
+        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRzg9M8MSzXBVryDXWSLM7TGhgtj-WoX2ylEQrFc1EDUJzsn8YH"
+        alt="من نحن"
+        className="w-full h-full object-cover"
+      />
+
+      {/* طبقة تغميق */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* المحتوى داخل الصورة */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+
+        <h2 className="text-5xl md:text-6xl font-extrabold text-[#e53935] mb-4">
+  من{" "}
+  <span className="relative inline-block">
+    نحن
+    <span className="absolute left-0 -bottom-2 w-full h-[4px] bg-[#f8f4f0] rounded-full"></span>
+  </span>
+</h2>
+
+        <p className="text-lg md:text-xl  mb-6 max-w-2xl">
+         <p className="text-2xl text-[#f8f4f0] max-w-3xl mx-auto">
+            نحن <span className="font-bold text-[#f8f4f0] text-xl "><span className="text-[#f8f4f0]">UNO</span><span className="text-xs text-[#E53935]">pizza</span></span> مطعم متخصص في تقديم أفضل أنواع البيتزا والفطاير باستخدام مكونات طازجة يوميًا 
+          </p>
+        </p>
+
+        <Link
+          to="/about"
+          className="bg-[#FFC107] text-gray-900 px-8 py-3 rounded-full hover:bg-[#ffb300] transition-colors"
+        >
+           اعرف عنا
+        </Link>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section className="py-10 bg-white">
+  <div className="container mx-auto px-4">
+
+    
+
+    <div className="grid grid-cols-4 md:grid-cols-4 gap-4">
+
+      <img
+        src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9"
+        className="w-full h-40 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+        alt="img1"
+      />
+
+      <img
+        src="https://images.unsplash.com/photo-1628840042765-356cda07504e"
+        className="w-full h-40 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+        alt="img2"
+      />
+
+      <img
+        src="https://images.unsplash.com/photo-1606756790138-261d2b21cd75"
+        className="w-full h-40 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+        alt="img3"
+      />
+
+      <img
+        src="https://i.pinimg.com/736x/f0/8b/e2/f08be24b2a2a42e344273ca54b2aad28.jpg"
+        className="w-full h-40 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+        alt="img4"
+      />
+
+    </div>
+
+  </div>
+</section>
+     <section className="py-10">
+  <div className="container mx-auto px-4">
+
+    <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden">
+
+      {/* الصورة */}
+      <img
+        src="https://i.pinimg.com/736x/f0/8b/e2/f08be24b2a2a42e344273ca54b2aad28.jpg"
+        alt="نحن نصنع البيتزا بحب"
+        className="w-full h-full object-cover"
+      />
+
+      {/* طبقة تغميق */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* المحتوى داخل الصورة */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+
+        <h2 className="text-3xl md:text-5xl mb-4">
+          نحن نصنع البيتزا بحب
+        </h2>
+
+        <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl">
+          نستخدم أفضل المكونات الطازجة لنقدم لك تجربة طعم لا تُنسى
+        </p>
+
+        <Link
+          to="/menu"
+          className="bg-[#FFC107] text-gray-900 px-8 py-3 rounded-full hover:bg-[#ffb300] transition-colors"
+        >
+          اكتشف المنيو
+        </Link>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       {/* Gallery */}
       <section className="container mx-auto px-4 py-10">
@@ -147,7 +303,7 @@ export function Home() {
                 <img
                   src={image}
                   alt={`معرض ${index + 1}`}
-                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                  className="w-full h-74 object-cover rounded-2xl shadow-lg"
                 />
               </div>
             ))}
@@ -180,20 +336,31 @@ export function Home() {
       </section>
 
       {/* Location */}
-      <section className="bg-white py-10">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl text-center mb-8">موقعنا</h2>
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-2 text-xl">
-              <MapPin className="w-6 h-6 text-[#E53935]" />
-              <span>القاهرة - الدقي</span>
-            </div>
-          </div>
-          <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
-            <p className="text-gray-600">خريطة الموقع</p>
-          </div>
-        </div>
-      </section>
+    <section className="bg-white py-10">
+  <div className="container mx-auto px-4">
+
+    <h2 className="text-3xl text-center mb-8">موقعنا</h2>
+
+    <div className="text-center mb-8">
+      <div className="flex items-center justify-center gap-2 text-xl">
+        <MapPin className="w-6 h-6 text-[#E53935]" />
+        <span>مدينة نصر - شارع الدكتور سيد صبري</span>
+      </div>
+    </div>
+
+    <div className="rounded-2xl overflow-hidden h-64 shadow-lg">
+      <iframe
+        title="location-map"
+        src="https://www.google.com/maps?q=3%20Street%20Dr%20Sayed%20Sabry%2C%20Nasr%20City%2C%20Cairo&output=embed"
+        width="100%"
+        height="100%"
+        loading="lazy"
+        className="border-0"
+      ></iframe>
+    </div>
+
+  </div>
+</section>
 
       {/* Features */}
       <section className="container mx-auto px-4 py-8">

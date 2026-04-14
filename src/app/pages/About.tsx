@@ -15,7 +15,7 @@ export function About() {
         {/* Main Image */}
         <div className="mb-16">
           <img
-            src="https://images.unsplash.com/photo-1710575341655-0062ead9f389?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXp6YSUyMGNoZWYlMjBjb29raW5nfGVufDF8fHx8MTc3NjEwODMxNHww&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRzg9M8MSzXBVryDXWSLM7TGhgtj-WoX2ylEQrFc1EDUJzsn8YH"
             alt="مطعم بيتزا القاهرة"
             className="w-full max-w-4xl mx-auto rounded-2xl shadow-lg"
           />
@@ -90,17 +90,17 @@ export function About() {
           <h2 className="text-3xl mb-8 text-center">من داخل المطعم</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <img
-              src="https://images.unsplash.com/photo-1651981038189-e71e557f5869?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXp6YSUyMHJlc3RhdXJhbnQlMjBraXRjaGVufGVufDF8fHx8MTc3NjEwODMxMnww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwVjGhF4Yxfoiia_y5HJJyTXDd3x6pT9acRw&s"
               alt="مطبخنا"
               className="w-full h-64 object-cover rounded-2xl shadow-lg"
             />
             <img
-              src="https://images.unsplash.com/photo-1689150911817-3e27168ab6a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpdGFsaWFuJTIwcGl6emElMjBvdmVufGVufDF8fHx8MTc3NjEwODMxNHww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLxyfszQg4N8xuqn7qH1a7235ZHjb9DNR7Q&s"
               alt="الفرن"
               className="w-full h-64 object-cover rounded-2xl shadow-lg"
             />
             <img
-              src="https://images.unsplash.com/photo-1678443316613-dbc3261c8b50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaXp6YSUyMGRlbGl2ZXJ5JTIwYm94fGVufDF8fHx8MTc3NjEwODMxM3ww&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzQEv9Pa9dtqgkHnY3vrZ49nNivBo2jMh0-g&s"
               alt="التوصيل"
               className="w-full h-64 object-cover rounded-2xl shadow-lg"
             />

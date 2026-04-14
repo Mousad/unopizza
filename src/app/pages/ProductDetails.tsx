@@ -5,6 +5,8 @@ import { products } from '../data/products';
 import { useCart } from '../contexts/CartContext';
 import { toast } from 'sonner';
 import { ProductCard } from '../components/ProductCard';
+import { FaShoppingCart } from "react-icons/fa";
+
 
 export function ProductDetails() {
   const { id } = useParams();
@@ -150,27 +152,30 @@ export function ProductDetails() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-4">
-              <button
-                onClick={handleAddToCart}
-                className="flex-1 bg-white border-2 border-[#E53935] text-[#E53935] py-4 rounded-lg hover:bg-[#E53935] hover:text-white transition-colors text-lg"
-              >
-                أضف للسلة
-              </button>
-              
-            </div>
+           {/* Action Buttons */}
+<div className="flex gap-4">
+  <button
+    onClick={handleAddToCart}
+    className="flex-1 flex items-center justify-center gap-2 bg-white border-2 border-[#E53935] text-[#E53935] py-4 rounded-lg hover:bg-[#E53935] hover:text-white transition-colors text-lg"
+  >
+    <span>أضف</span>
+    <FaShoppingCart />
+  </button>
+</div>
           </div>
         </div>
 
         {/* Sticky Bottom Button (Mobile) */}
-        <div className="fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg lg:hidden z-50">
-          <button
-            onClick={handleOrderNow}
-            className="w-full bg-[#E53935] text-white py-4 rounded-lg text-lg"
-          >
-            اطلب الآن - {selectedPrice * quantity} جنيه
-          </button>
-        </div>
+<div className="fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg lg:hidden z-50">
+  <button
+    onClick={handleOrderNow}
+    className="w-full flex items-center justify-center gap-2 bg-[#E53935] text-white py-2 rounded-lg text-lg"
+  >
+    <FaShoppingCart />
+   
+    <span>{selectedPrice * quantity} ج م</span>
+  </button>
+</div>
 
         {/* Related Products */}
         {relatedProducts.length > 0 && (

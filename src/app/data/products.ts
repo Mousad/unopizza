@@ -131,7 +131,7 @@ export const products: Product[] = [
       { size: 'وسط', price: 55 },
       { size: 'كبير', price: 75 },
     ],
-    image: 'https://images.unsplash.com/photo-1733252211052-91a95b0291f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmFiaWMlMjBmYXRheWVyJTIwcGFzdHJ5fGVufDF8fHx8MTc3NjEwODMxMnww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://i.pinimg.com/736x/2a/66/da/2a66daa4b679d2bb336134e115f325c3.jpg',
   },
   {
     id: '9',
@@ -143,7 +143,7 @@ export const products: Product[] = [
       { size: 'وسط', price: 65 },
       { size: 'كبير', price: 85 },
     ],
-    image: 'https://images.unsplash.com/photo-1733252211052-91a95b0291f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmFiaWMlMjBmYXRheWVyJTIwcGFzdHJ5fGVufDF8fHx8MTc3NjEwODMxMnww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://i.pinimg.com/736x/5c/ca/86/5cca86e9e72f527c84d28403f285bfc9.jpg',
   },
   {
     id: '10',
@@ -155,7 +155,7 @@ export const products: Product[] = [
       { size: 'وسط', price: 50 },
       { size: 'كبير', price: 70 },
     ],
-    image: 'https://images.unsplash.com/photo-1733252211052-91a95b0291f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcmFiaWMlMjBmYXRheWVyJTIwcGFzdHJ5fGVufDF8fHx8MTc3NjEwODMxMnww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://i.pinimg.com/1200x/05/1b/36/051b361ea83d999513b6c36eb09d13f6.jpg',
   },
 
   // Calzone
@@ -168,7 +168,7 @@ export const products: Product[] = [
       { size: 'عادي', price: 70 },
       { size: 'كبير', price: 100 },
     ],
-    image: 'https://images.unsplash.com/photo-1536964549204-cce9eab227bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWx6b25lJTIwaXRhbGlhbiUyMGZvb2R8ZW58MXx8fHwxNzc2MTA4MzEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://i.pinimg.com/736x/01/fc/cb/01fccbf78f75f2d41ba83f100b47279b.jpg',
   },
   {
     id: '12',
@@ -180,5 +180,27 @@ export const products: Product[] = [
       { size: 'كبير', price: 115 },
     ],
     image: 'https://images.unsplash.com/photo-1536964549204-cce9eab227bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWx6b25lJTIwaXRhbGlhbiUyMGZvb2R8ZW58MXx8fHwxNzc2MTA4MzEyfDA&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+  {
+    id: '13',
+    name: 'كلزوني ',
+    category: 'calzone',
+    description: 'عجينة محشوة باللحم البقري والجبنة',
+    sizes: [
+      { size: 'عادي', price: 80 },
+      { size: 'كبير', price: 115 },
+    ],
+    image: 'https://i.pinimg.com/736x/c6/46/7d/c6467d9921ac60118d4c30bb4f68384e.jpg',
+  },
+  {
+    id: '14',
+    name: 'كلزوني لحم',
+    category: 'calzone',
+    description: 'عجينة محشوة باللحم البقري والجبنة',
+    sizes: [
+      { size: 'عادي', price: 80 },
+      { size: 'كبير', price: 115 },
+    ],
+    image: 'https://i.pinimg.com/1200x/7b/30/2f/7b302f923f341c773f88fe10a2ad9fff.jpg',
   },
 ];
